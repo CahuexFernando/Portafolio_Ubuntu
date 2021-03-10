@@ -1,0 +1,154 @@
+LISTA DE COMANDOS PARA LINUX BASICO
+
+
+LOS COMANDOS EN LINUX SON ABREVIACIONES DE LA PALABRA COMPLETA EN INGLES ESTOS
+COMANDOS PUEDEN IRNA COMPAÑADOS DE OPCIONES Y ARGUMENTOS.
+
+	COMANDOS:	los comandos son pequeños programas que realizan acciones
+			en el sistema operativo.
+
+	OPCIONES:	las opciones cambian el comportamiento del comando para
+			que realice su cometido pero con opciones agregadas o
+			resumidas.
+
+			/	indica el directorio raíz del sistema operativo
+			$	indica el directorio del usuario
+			..	indica que es el directorio padre
+			.	indica el directorio actual
+
+	ARGUMENTOS:	los argumentos complementan un comando estos dan infor-
+			mación adicional para su funcionamiento.
+
+
+
+LISTA DE COMANDOS:
+
+
+NAVECACIÓN
+	pwd		muestra la dirección actual en que te encuentras.
+
+	ls		permite desplegar un listado del contenido de la carpeta
+			actual, también puedes especificar de que carpeta deseas
+			ver el contenido.
+			-OPCIONES
+				-l	muestra mas detallen en la lista
+				-a	muestra el contenido oculto de la lista
+				-al	permite realizar las dos opciones ateri-
+					ores declarado en una misma opción.
+				-t	ordena la lista por fecha de codificación
+				-x	ordena por nombre y después por extensión
+				-X	ordena primero por extensión.
+				-lh	muestra la información en KB, MB
+				
+
+	cd		permite movilizarte entre directorios.
+			Ejemplos:
+				cd ..	se moviliza a la carpeta padre de tu
+					ubicación.
+
+				cd	luego del comando agrega el nombre del
+					Directorio hijo al que deseas moverte.
+
+				cd /	te moviliza a la carpeta raiz del sis-
+					tema operativo.
+
+				cd $	te moviliza a la carpeta del usuario.
+CREACIÓN DE DIRECTORIOS
+
+	mkdir		permite crear un directorio nuevo
+			ejemplo:
+				mkdir nombreDelDirectorio
+
+	rmdir		permite eliminar un directorio ( no se puede eliminar
+			un directorio con contenido).
+
+	cp		permite copiar un archivo especificando el nombre del
+			archivo con su extensión y el lugar a donde se desea
+			movilizar.
+			ejemplo:
+				cp nombreArchivo.extension /direccion
+
+CREACIÓN DE ARCHIVOS
+
+	touch		con este comando puedes crear un documento .txt
+			Ejemplo:
+				touch nombreDocumento.txt
+
+	cat		podemos crear un .txt y ver el contenido de un archivo
+			Ejemplo:
+				cat > nombreNuevoDirectorio
+				car nombreDirectorioAVer
+				
+
+	head		el comando head seguido del nombre de un archivo muestra
+			el contenido de las primeras líneas.
+			OPCIONES:
+				head -n		con esta opción podemos indicar
+						cuantas líneas del inicio queremos
+			ejemplo:
+				head nombreArchivo.extension
+				head -n numeroDelineas nombreArchivo.extension
+
+			
+	tail		este comando realiza todo lo contrario del comando head.
+
+
+	rm		permite eliminar un archivo, especificando luego del
+			comando el nombre del archivo con su extensión.
+
+	mv		permite movilizar un archivo de un directorio a otro.
+			ejemplo:
+				mv nombreArchivo.extesion /direcciónNueva
+
+NAVEGACIÓN EN EL DOCUMENTO
+
+	grep		este comando permite localizar entre las líneas del
+			documento si existe la palabra que le indiquemos.
+			ejemplo:
+				grep palabraABuscar nombreDelDocumento.extension
+
+			OPCIONES
+				-i	permite búsqueda sin límite de mayúscula
+					o minúscula.
+
+				-i "$"	con esta opción podremos buscar un conte-
+					nido según con que palabra termine ejemplo
+					grep -i "palabra$" documento.extension
+	
+
+	sed		este comando permite sustituir una palabra por otra en
+			Todo el flujo del documento a momento de mostrarse este
+			Comando no modifica el archivo.
+			Ejemplo:
+				sed 's/palabraCambiar/palabraNueva/g' Archivo
+
+				NOTA: la 's' indica sustitución y la 'g' indica
+				que este cambio se realice en todo el flujo.
+
+			OPCIONES:
+				'$d'	elimina la última línea del archivo
+
+
+	nl		muestra el documento con la lineas enumeradas sin embargo
+			no toma en cuenta las lineas vasias pero con algunas opciones
+			podemos ver con mas detalles.
+
+			nl archivo.extension		muesta las lineas enumeradas
+							pero no toma en cuenta las
+							lineas vasias.
+
+			nl -b a archivo.extemsion	con las opciones -b y a podemos
+							enumerar las lineas tomando en
+							cuenta las lineas vasias.
+
+			nl -s "." archivo.extension	con este comando agregamos la
+							enumeración de las lineas y
+							adicional despues de cada numero
+							un signo este puede ser el que
+							gustes solo debes colocarlo entre
+							las comillas en este caso utilizamos
+							un punto.
+
+			ln -w3 archivo.extension	con esta opción puedes agregar una
+							tabulación despues de la enumeracion
+							para obtener una salida mas ordenada.
